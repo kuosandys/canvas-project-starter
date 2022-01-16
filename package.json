@@ -6,17 +6,32 @@
   "type": "module",
   "scripts": {
     "build": "node esbuild.config.js",
-    "start": "node esbuild.config.js -w"
+    "start": "node esbuild.config.js -w",
+    "prepare": "./node_modules/.bin/husky-run install"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "./node_modules/.bin/tsc --noEmit",
+      "eslint --fix"
+    ],
+    "**/*.{css,ts}": [
+      "prettier --write"
+    ]
   },
   "author": "kuosandys",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "esbuild": "^0.14.11",
     "esbuild-serve": "^1.0.1",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   }
