@@ -1,14 +1,21 @@
 import './styles/main.css';
 
-function init() {
+function initCanvas() {
   const canvas = document.getElementById('main-canvas');
-  const context = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  return canvas;
+}
+
+function draw(canvas) {
+  // eslint-disable-next-line no-unused-vars
+  const ctx = canvas.getContext('2d');
+  // Go wild.
 }
 
 function main() {
-  init();
+  const canvas = initCanvas();
+  draw(canvas);
 }
 
 main();
