@@ -2,7 +2,7 @@ import esbuildServe from 'esbuild-serve';
 
 esbuildServe(
   {
-    entryPoints: ['src/index.js'],
+    entryPoints: ['src/index.ts'],
     bundle: true,
     incremental: true,
     minify: true,

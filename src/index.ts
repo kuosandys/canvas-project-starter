@@ -1,8 +1,8 @@
 import './styles/main.css';
 import draw from './draw';
 
-function initCanvas() {
-  const canvas = document.getElementById('main-canvas');
+function initCanvas(): HTMLCanvasElement {
+  const canvas = document.getElementById('main-canvas') as HTMLCanvasElement;
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   return canvas;
