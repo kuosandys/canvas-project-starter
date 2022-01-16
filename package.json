@@ -1,0 +1,18 @@
+{
+  "name": "canvas-starter-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "start": "node esbuild.config.js -w"
+  },
+  "author": "kuosandys",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.14.11",
+    "esbuild-serve": "^1.0.1"
+  }
+}
