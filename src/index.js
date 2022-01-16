@@ -1,4 +1,5 @@
 import './styles/main.css';
+import draw from './draw';
 
 function initCanvas() {
   const canvas = document.getElementById('main-canvas');
@@ -7,15 +8,8 @@ function initCanvas() {
   return canvas;
 }
 
-function draw(canvas) {
-  // eslint-disable-next-line no-unused-vars
-  const ctx = canvas.getContext('2d');
-  // Go wild.
-}
-
 function main() {
-  const canvas = initCanvas();
-  draw(canvas);
+  draw(initCanvas());
 }
 
 main();
