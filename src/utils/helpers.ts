@@ -30,3 +30,11 @@ export function logContextNotFoundError() {
 export function toHSL(colour: IColour) {
   return `hsl(${colour.h}, ${colour.s}%, ${colour.l}%)`;
 }
+
+export function getRandomItem<T>(array: T[]): T {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+export function getRandomChoice(weight = 0.5): 1 | -1 {
+  return Math.random() > weight ? 1 : -1;
+}
