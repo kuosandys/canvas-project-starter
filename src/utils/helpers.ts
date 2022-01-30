@@ -1,3 +1,5 @@
+import { IColour } from '../types';
+
 /**
  * "Sleep" for given milliseconds
  * @param {number} ms
@@ -23,4 +25,8 @@ export function clear(canvas: HTMLCanvasElement) {
 
 export function logContextNotFoundError() {
   console.log('Unable to get context');
+}
+
+export function toHSL(colour: IColour) {
+  return `hsl(${colour.h}, ${colour.s}%, ${colour.l}%)`;
 }
