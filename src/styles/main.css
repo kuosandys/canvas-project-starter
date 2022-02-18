@@ -1,6 +1,7 @@
 :root {
   --canvas-margin: 20px;
   --cosmic-latte: #fff8e7;
+  --eigengrau: #16161d;
 }
 
 * {
@@ -11,7 +12,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #16161d;
+  background-color: var(--eigengrau);
 }
 
 body {
