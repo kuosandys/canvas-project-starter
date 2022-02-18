@@ -54,3 +54,7 @@ export function getRandomAngles(slices: number): number[] {
 
   return angles;
 }
+
+export function getRandomVariance(variance: number): number {
+  return Math.random() * variance * getRandomChoice();
+}
