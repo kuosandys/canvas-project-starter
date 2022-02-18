@@ -38,3 +38,19 @@ export function getRandomItem<T>(array: T[]): T {
 export function getRandomChoice(weight = 0.5): 1 | -1 {
   return Math.random() > weight ? 1 : -1;
 }
+
+/**
+ * Get an array of random angles that divide a circle into
+ * the number of specified slices
+ * @param slices number
+ */
+export function getRandomAngles(slices: number): number[] {
+  const angles: number[] = new Array(slices);
+
+  for (let i = 0; i < angles.length; i++) {
+    angles[i] =
+      (Math.random() * (Math.PI * 2)) / slices + (Math.PI * 2 * i) / slices;
+  }
+
+  return angles;
+}
