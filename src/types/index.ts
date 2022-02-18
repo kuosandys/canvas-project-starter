@@ -7,4 +7,5 @@ export interface IColour {
   h: number;
   s: number;
   l: number;
+  a?: number;
 }

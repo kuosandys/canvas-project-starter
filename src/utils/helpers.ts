@@ -28,7 +28,7 @@ export function logContextNotFoundError() {
 }
 
 export function toHSL(colour: IColour) {
-  return `hsl(${colour.h}, ${colour.s}%, ${colour.l}%)`;
+  return `hsl(${colour.h}, ${colour.s}%, ${colour.l}%, ${colour.a ?? 1})`;
 }
 
 export function getRandomItem<T>(array: T[]): T {
