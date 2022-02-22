@@ -30,3 +30,13 @@ canvas {
   margin-top: 0;
   border: 1px solid var(--cosmic-latte);
 }
+
+button {
+  width: 80px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
