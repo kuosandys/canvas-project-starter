@@ -20,6 +20,7 @@ export function clear(canvas: HTMLCanvasElement) {
     return;
   }
 
+  // TODO: replace with ctx.reset() when properly typed
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
