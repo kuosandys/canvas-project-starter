@@ -1,4 +1,4 @@
-import { IColour } from '../types';
+import { IColour, IPoint } from '../types';
 
 /**
  * "Sleep" for given milliseconds
@@ -22,6 +22,14 @@ export function clear(canvas: HTMLCanvasElement) {
 
   // TODO: replace with ctx.reset() when properly typed
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+export function drawDot(
+  ctx: CanvasRenderingContext2D,
+  point: IPoint,
+  radius = 1
+) {
+  ctx.arc(point.x, point.y, radius, 0, Math.PI * 2);
 }
 
 export function logContextNotFoundError() {
